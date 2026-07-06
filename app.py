@@ -3,7 +3,7 @@ from google import genai
 from google.genai import types
 
 # Cấu hình API Key
-API_KEY = "AQ.Ab8RN6JC4Kr3Y0yYCAVeS-kWOdc3sQeAxL10ULU-hZdYZu9AaQ"
+API_KEY = "AQ.Ab8RN6I4rwJjePlGgVQ4vkIcAFTeMKorfrfFiXUwplPlUvRezg"
 client = genai.Client(api_key=API_KEY)
 # Giao diện
 st.set_page_config(page_title="Trợ Lý Học Tập AI Q.A Pro", page_icon="🎓", layout="wide")

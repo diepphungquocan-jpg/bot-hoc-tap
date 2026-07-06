@@ -5,6 +5,7 @@ from google.genai import types
 # Cấu hình API Key
 API_KEY = "AQ.Ab8RN6I4rwJjePlGgVQ4vkIcAFTeMKorfrfFiXUwplPlUvRezg"
 client = genai.Client(api_key=API_KEY)
+
 # Giao diện
 st.set_page_config(page_title="Trợ Lý Học Tập AI Q.A Pro", page_icon="🎓", layout="wide")
 st.title("🎓 Trợ Lý Học Tập AI Thông Minh Q.A (Bản Pro)")
@@ -16,7 +17,6 @@ with st.sidebar:
         "Chọn chế độ hỗ trợ học tập:",
         ["Gia sư tổng hợp", "Chuyên gia Giải Toán/Lý/Hóa", "Luyện Tiếng Anh", "Tạo câu hỏi trắc nghiệm ôn tập"]
     )
-    
     st.write("---")
     if st.button("Xóa lịch sử chat"):
         st.session_state.messages = []
@@ -45,7 +45,7 @@ if prompt := st.chat_input("Nhập câu hỏi học tập của bạn tại đâ
     with st.chat_message("user"):
         st.markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
-
+    
     # AI phản hồi
     with st.chat_message("assistant"):
         with st.spinner("Đang suy nghĩ..."):

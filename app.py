@@ -2,7 +2,6 @@ import streamlit as st
 from google import genai
 from google.genai import types
 
-# Cấu hình API Key
 API_KEY = "AQ.Ab8RN6JcBccDnlSxgvqID-LA-whQTjMwBoooLjgJZUD2WSXlAA"
 client = genai.Client(api_key=API_KEY)
 
